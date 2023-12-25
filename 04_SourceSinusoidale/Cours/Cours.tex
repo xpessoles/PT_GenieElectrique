@@ -61,7 +61,7 @@ Le courant moyen d'un courant périodique serait équivalant au courant continu 
 \subsection{Valeur efficace}
 \begin{defi}[Valeur efficace]
 La valeur efficace $S$ ou $\indice{S}{eff}$ du signal $s(t)$ est donnée par  
-$$\indice{S}{eff} = \sqrt{\dfrac{1}{T} \int\limits_{t_0}^{t_0+T} s^2(t)\; \dd t}.$$
+$$\indice{S}{eff} = \sqrt{\dfrac{1}{T} \int\limits_{t_0}^{t_0+T} s^2(t)\; \dd t} = \sqrt{\langle s^2 \rangle}.$$
 
 En anglais on parle de Root Mean Square (RMS).
 \end{defi}
@@ -114,7 +114,7 @@ On note $s(t)=A\sin\left(\omega t + \varphi\right)$ avec :
 \begin{itemize}
 \item  $A$ amplitude du signal;
 \item  $\omega$ pulsation en $\si{rad.s^{-1}}$ tel que $\omega = 2\pi f = \dfrac{2\pi}{T}$;
-\item  $\varphi$  déphasage.
+\item  $\varphi$  phase à l'instant $t$.
 \end{itemize}
 \end{defi}
 
@@ -140,3 +140,41 @@ $\indice{S}{eff}= \sqrt{\dfrac{ A^2}{2 T}\left( T -  \dfrac{\sin\left( 2\omega T
   $= \sqrt{\dfrac{ A^2}{2 T}T }$ $= \dfrac{A}{\sqrt{2}}$.
 
 
+\subsection{Puissance électrique}
+
+\begin{defi}[Puissance instantanée]
+Soit un dipôle parcouru par un courant $i(t)$ et soumis à une tension $u(t)$.
+La puissance instantanée s'exprime par 
+$$p(t)=u(t) i(t).$$
+
+\end{defi}
+
+
+\begin{defi}[Puissance active]
+Soit un dipôle parcouru par un courant $i(t)$ et soumis à une tension $u(t)$.
+La puissance active $P$ en \si{W} s'exprime par 
+$$P = \langle p(t) \rangle = \langle u(t) i(t) \rangle  =\dfrac{1}{T} \int\limits_{0}^{T} u(t) i(t)\; \dd t. $$
+
+\end{defi}
+
+\section{Alimentation monphasée}
+
+\begin{marginfigure}
+\centering
+\includegraphics[width=.6\linewidth]{fig_06}
+\caption{Prise électrique \label{fig:ge:cours:06}}
+\end{marginfigure}
+
+Aux bornes d'une prise électrique domestique, l'alimentation est sinusoïdale monophasée. Entre la phase et le neutre on mesure une tension simple $v(t)$ dont la valeur efficace est de $\SI{230}{V}$.
+
+Ainsi l'amplitude du signal est de \SI{325}{V}.
+
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{plt_01.pdf}
+\includegraphics[width=\linewidth]{plt_01.png}
+\caption{ Tension et courant sinusoïdaux\label{fig:ge:cours:plt:01}}
+
+\end{marginfigure}
+
+La tension et le courant distribués sont sinusoïdaux. 
