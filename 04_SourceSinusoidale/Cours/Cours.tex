@@ -179,14 +179,23 @@ La source de tension $e$ est de la forme $e(t)=E\cos\left(\omega t + \varphi\rig
 On a donc, $i(t)=-CE\omega\sin\left(\omega t + \varphi\right)$.
 
 Or, $-\sin(x) =\cos(x+\dfrac{\pi}{2})$. On a donc 
-$i(t)=CE\omega\cos\left(\omega t + \varphi+\dfrac{\pi}{2}\right)$. La tension est donc << en retard >> sur le courant. 
+$i(t)=CE\omega\cos\left(\omega t + \varphi+\dfrac{\pi}{2}\right)$. La tension aux bornes du condensateur est donc << en retard >> sur le courant. 
 
 
 La puissance instantanée s'exprime donc par $p(t)=i(t) u_c(t)$
 $= -CE\omega^2\cos\left(\omega t + \varphi\right)\sin\left(\omega t + \varphi\right)$.
 
 La puissance active se calcule donc ainsi :
+
 $P= -\dfrac{CE\omega^2}{T}\underbrace{\int\limits_{0}^{T} \cos\left(\omega t + \varphi\right)\sin\left(\omega t + \varphi\right)\; \dd t}_{0}=0$.
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{fig_08}
+\caption{Signal alternatif sinusoïdal \label{fig:ge:cours:fig_08}}
+\end{marginfigure}
+\paragraph{Représentation dans le plan complexe}
+
+
 %
 %En passant en notation complexe, on a $\underline{i}(t)=C\deriv{\underline{u_c}(t)}{}$
 %$=jC\omega\underline{u_c}(t)$ et $e(t)=Ee^{j\left(\omega t + \varphi\right)}$. On a donc 
@@ -219,7 +228,13 @@ Ainsi l'amplitude du signal est de \SI{325}{V}.
 
 \end{marginfigure}
 
-La tension et le courant distribués sont sinusoïdaux. 
+La tension et le courant distribués sont sinusoïdaux. On note 
+$i(t)=\indice{I}{eff}\sqrt{2}\sin\left(\omega t\right)$ et 
+$v(t)=\indice{V}{eff}\sqrt{2}\sin\left(\omega t + \varphi \right)$.
+
+\subsection{Evaluation de la puissance}
+\subsubsection{Puissance instantanée}
+\subsubsection{Puissance active}
 
 
 \section{Quelques calculs}
