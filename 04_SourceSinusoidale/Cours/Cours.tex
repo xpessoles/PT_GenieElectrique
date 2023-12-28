@@ -8,7 +8,7 @@
 %\UPSTIcompetence[2]{B2-10}
 %}
 
-%\marginnote[6cm]{\textbf{Emilien Durif}, \textit{Approche énergétique}, Lycée La Martinière Monplaisir, Lyon.}
+\marginnote{\textbf{Institut Emmanuel d'Alzon}, \url{https://sites.google.com/view/tsidalzon/}.}
 
 \section{Signaux périodiques}
 
@@ -298,11 +298,62 @@ L'alimentation triphasée est très répandue que ce soit dans le domaine indust
 
 À puissance équivalente, une installation triphasée nécessite moints de cuivre qu'une installation monophasée. De plus certaines machines travaillent de manière optimale en triphasé. 
 
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{plt_02.pdf}
+%\includegraphics[width=\linewidth]{plt_01.png}
+\caption{Tensions simples \label{fig:ge:cours:plt:02}}
+\end{marginfigure}
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\linewidth]{fig_10}
 \caption{Réseau triphasé \label{fig:ge:cours:&0}}
 \end{figure}
+
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{plt_03.pdf}
+%\includegraphics[width=\linewidth]{plt_01.png}
+\caption{Tensions composées \label{fig:ge:cours:plt:03}}
+\end{marginfigure}
+
+Les tensions simples se mesurent entre chacune des phases et le neutre. 
+Elles sont chacune décalées d'un tiers de période : 
+$\left\{ 
+\begin{array}{l}
+v_1(t)  = \indice{V}{eff} \sqrt{2} \sin \left(\omega t\right) \\
+v_2(t)  = \indice{V}{eff} \sqrt{2} \sin \left(\omega t - \dfrac{2\pi}{3}\right) \\
+v_3(t)  = \indice{V}{eff} \sqrt{2} \sin \left(\omega t - \dfrac{4\pi}{3} \right) \\
+\end{array}
+\right.
+$.
+
+
+
+Les tensions composées se mesurent entre chaque phases. Elles sont chacune décalées d'un tiers de période : 
+$\left\{ 
+\begin{array}{l}
+u_{12}(t)  = v_1(t) - v_2(t) \\
+u_{23}(t)  = v_2(t) - v_2(t) \\
+u_{31}(t)  = v_3(t) - v_1(t) \\
+\end{array}
+\right.
+$.
+
+
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{fig_11}
+\caption{Interprétation graphique \label{fig:ge:cours:11}}
+\end{marginfigure}
+%
+%En traçant les tensions simples dans le plan complexe, on peut en déduire différents résultats. 
+%Par exemple, l'amplitude de la tension $u_{12}$ est égale à $\indice{V}{eff}\sqrt{2}+\indice{V}{eff}\sqrt{2}\cos 60$ 
+%$ = \indice{V}{eff}\sqrt{2}\dfrac{3}{2}$ 
+
+
+
 
 \section{Quelques calculs}
 
