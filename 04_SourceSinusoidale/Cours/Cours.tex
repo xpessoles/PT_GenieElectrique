@@ -75,7 +75,7 @@ Le courant efficace d'un courant périodique serait équivalant au courant conti
 Pour la figure \ref{fig:ge:cours:02} la valeur moyenne du signal est de 4,2.
 $\indice{S}{eff} = \sqrt{\dfrac{1}{T} \int\limits_{t_0}^{t_0+T} s^2(t)\; \dd t}$
 $=\sqrt{\dfrac{1}{10} \left( \int\limits_{0}^{8} 7^2(t)\; \dd t + \int\limits_{8}^{10} 7^2(t)\; \dd t\right)}$
-$=\sqrt{\dfrac{1}{10} \left( \int\limits_{0}^{8} 7^2(t)\; \dd t + \int\limits_{8}^{10} 7^2(t)\; \dd t\right)}.$
+$=\sqrt{\dfrac{1}{10} \left( \int\limits_{0}^{8} 7^2(t)\; \dd t + \int\limits_{8}^{10} 7^2(t)\; \dd t\right)}$
 $=\sqrt{\dfrac{1}{10} \left( 49 \times 8 + 49 \times 2\right)}=7$
 
 
@@ -134,14 +134,6 @@ $$p(t)=u(t) i(t).$$
 
 \end{defi}
 
-\begin{resultat}
-Si $u(t)=U\cos\left(\omega t + \varphi\right)$
-et 
-$i(t)=I\cos\left(\omega t + \varphi'\right)$ 
-alors on montre que 
-
-$p(t)=\dfrac{UI}{2}\left( \cos\left(2\omega t + \varphi + \varphi' \right)+\cos\left(\varphi -\varphi' \right)\right)$
-\end{resultat}
 
 \begin{defi}[Puissance active]
 Soit un dipôle parcouru par un courant $i(t)$ et soumis à une tension $u(t)$.
@@ -189,11 +181,13 @@ La puissance active se calcule donc ainsi :
 
 $P= -\dfrac{CE\omega^2}{T}\underbrace{\int\limits_{0}^{T} \cos\left(\omega t + \varphi\right)\sin\left(\omega t + \varphi\right)\; \dd t}_{0}=0$.
 
+
+\paragraph{Représentation dans le plan complexe}
+
 \begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_08}
 \caption{Signal alternatif sinusoïdal \label{fig:ge:cours:fig_08}}
 \end{marginfigure}
-\paragraph{Représentation dans le plan complexe}
 
 
 %
@@ -206,6 +200,45 @@ $P= -\dfrac{CE\omega^2}{T}\underbrace{\int\limits_{0}^{T} \cos\left(\omega t + \
 %
 %On a alors, $i(t) =Re\left(\underline{i}(t)\right) $ $=-C\omega E \sin\left(\omega t + \varphi\right)$
 
+
+
+\subsection{Puissance apparente complexe\sidenote{$\underline{i}^*(t)$ est le nombre complexe conjugué de $\underline{i}(t)$.}}
+
+\marginnote{La puissance active va permettre de chauffer, déplacer une charge, produire un mouvment \textit{etc.}}
+
+\marginnote{La puissance apparente permet de dimensionner les composants d'alimentation et de distribution.}
+
+\marginnote{La puissance réactive est source de pertes par effet Joule. Il est important de la réduire autant que possible dans une installation électrique.}
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{fig_09}
+\caption{Représentation graphique des puissances\label{fig:ge:cours:fig_09}}
+\end{marginfigure}
+
+\begin{defi}[Puissance apparente]
+À la tension $u(t)=U\cos\left( \omega t + \varphi_u\right)$ on associe sa représentation complexe 
+$\underline{u}(t)=Ue^{j\varphi_u}$.
+
+On note  $i(t)=I\cos\left( \omega t + 0\right)$.% on associe sa représentation complexe $\underline{i}(t)=I$.
+
+La puissance apparente se définit donc par : 
+$$ \underline{s}(t) = \dfrac{1}{2}\underline{u}(t)\underline{i}^*(t) = P + j Q $$ 
+%
+%
+
+On appelle alors :
+\begin{itemize}
+\item $|\underline{s}(t)| = S = \dfrac{1}{2}UI = \indice{U}{eff}\indice{I}{eff}$ la puissance apparente en \si{VA};
+\item $P = \dfrac{1}{2}UI\cos\varphi = \indice{U}{eff}\indice{I}{eff} \cos\varphi$ la puissance active en \si{W};
+\item $Q = \dfrac{1}{2}UI\sin\varphi = \indice{U}{eff}\indice{I}{eff} \sin\varphi$ la puissance réactive en \si{VAR}.
+\end{itemize}
+\end{defi}
+
+
+
+%$p(t)=u(t)i(t)$ 
+%$=UIe^{j\left(\varphi_u+\varphi_i\right)}$
+%$=UI\left(\cos\left(\varphi_u+\varphi_i \right) + j\sin\left(\varphi_u+\varphi_i \right)\right)$
 
 
 \section{Alimentation monphasée}
@@ -223,7 +256,7 @@ Ainsi l'amplitude du signal est de \SI{325}{V}.
 \begin{marginfigure}
 \centering
 \includegraphics[width=\linewidth]{plt_01.pdf}
-\includegraphics[width=\linewidth]{plt_01.png}
+%\includegraphics[width=\linewidth]{plt_01.png}
 \caption{ Tension et courant sinusoïdaux\label{fig:ge:cours:plt:01}}
 
 \end{marginfigure}
@@ -234,8 +267,42 @@ $v(t)=\indice{V}{eff}\sqrt{2}\sin\left(\omega t + \varphi \right)$.
 
 \subsection{Evaluation de la puissance}
 \subsubsection{Puissance instantanée}
+\marginnote{$2 \sin a \sin b = \cos \left(a-b\right) - \cos \left(a+b\right)$}
+
+On a $p(t)=v(t)i(t)$ 
+$=\indice{V}{eff}\sqrt{2}\sin\left(\omega t + \varphi \right)\times \indice{I}{eff}\sqrt{2}\sin\left(\omega t\right)$
+$=2\indice{V}{eff}\indice{I}{eff}\sin\left(\omega t + \varphi \right)\times \sin\left(\omega t\right)$
+
+$=\indice{V}{eff}\indice{I}{eff}
+\left( 
+\cos \left(\omega t + \varphi -\omega t\right) - 
+\cos \left(\omega t + \varphi +\omega t\right) 
+\right)
+$
+
+$=\indice{V}{eff}\indice{I}{eff}
+\left( 
+\cos \left( \varphi \right) - \cos \left(2\omega t + \varphi \right) 
+\right)
+$
+
+%$=\indice{V}{eff}\indice{I}{eff}\left( 
+%\cos \left(\omega t + \varphi \right-\omega t\right) - \cos \left(\omega t + \varphi \right+\omega t\right) \right)$
+
+
 \subsubsection{Puissance active}
 
+
+\section{Alimentation alternative sinusoïdale triphasée}
+L'alimentation triphasée est très répandue que ce soit dans le domaine industriel, lorsque les puissances à fournir sont importantes, mais aussi dans certaines maisons individuelles où les besois sont importants.
+
+À puissance équivalente, une installation triphasée nécessite moints de cuivre qu'une installation monophasée. De plus certaines machines travaillent de manière optimale en triphasé. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\linewidth]{fig_10}
+\caption{Réseau triphasé \label{fig:ge:cours:&0}}
+\end{figure}
 
 \section{Quelques calculs}
 
@@ -315,4 +382,15 @@ une grandeur complexe: $\underline{x}(t)=X e^{j\left(\omega t + \varphi\right)}$
 \item $x(t) = Re\left(\underline{x}(t)\right)$
 \item $\varphi ... $
 \end{itemize}
+\end{resultat}
+
+
+
+\begin{resultat}
+Si $u(t)=U\cos\left(\omega t + \varphi\right)$
+et 
+$i(t)=I\cos\left(\omega t + \varphi'\right)$ 
+alors on montre que 
+
+$p(t)=\dfrac{UI}{2}\left( \cos\left(2\omega t + \varphi + \varphi' \right)+\cos\left(\varphi -\varphi' \right)\right)$
 \end{resultat}
