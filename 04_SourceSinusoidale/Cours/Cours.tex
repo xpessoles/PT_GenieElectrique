@@ -347,13 +347,54 @@ $.
 \includegraphics[width=\linewidth]{fig_11}
 \caption{Interprétation graphique \label{fig:ge:cours:11}}
 \end{marginfigure}
-%
-%En traçant les tensions simples dans le plan complexe, on peut en déduire différents résultats. 
-%Par exemple, l'amplitude de la tension $u_{12}$ est égale à $\indice{V}{eff}\sqrt{2}+\indice{V}{eff}\sqrt{2}\cos 60$ 
-%$ = \indice{V}{eff}\sqrt{2}\dfrac{3}{2}$ 
+
+En traçant les tensions simples dans le plan complexe, on peut en déduire différents résultats. 
+Par exemple, l'amplitude de la tension $U_{12}=|\underline{u_{12}}(t)|$ est égale à $2V_1\cos 30$ 
+$ = {V}_{1}\sqrt{3}$ 
 
 
 
+\subsection{Couplages}
+\begin{defi}[Récepteur équilibré]
+Un récepteur triphasé est dit équilibré s'il est constitué de trois dipôles identiques (même impédance $Z$, même facteur de puissance $\cos\varphi$.
+
+On note $i$ les courants passant dans les fils du réseau triphasé.
+
+On note $j$ les courants traversant les dipoles.
+\end{defi}
+
+\subsubsection{Couplage en étoile}
+
+
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{fig_12}
+\caption{Couplage en étoile \label{fig:ge:cours:12}}
+\end{marginfigure}
+
+D'après la loi des n\oe{}uds, $i_1 + i_2 + i_3 = i_N$. S'agissant des mêmes impédances, on a $i_N=0$. Pour un système équilibré, le fil de neutre peut donc être enlevé sur le schéma.
+
+%\marginnote{{Rappel : $3\indice{V}{eff} = \sqrt{3}\indice{U}{eff}$.}}
+\begin{tabular}{lll}
+\hline
+& Puissance active & Puissance réactive \\ 
+1 phase du récepteur & 
+$P_1 = \indice{V}{eff}\indice{I}{eff} \cos \varphi$ &
+$Q_1 = \indice{V}{eff}\indice{I}{eff} \sin \varphi$ \\
+Récepteur complet & 
+$P = 3P_1 =  3\indice{V}{eff}\indice{I}{eff} \cos \varphi$ &
+$Q = 3Q_1 = 3 \indice{V}{eff}\indice{I}{eff} \sin \varphi$ \\
+\hline
+\end{tabular}
+
+La puissance apparente est donc donnée par $S = \sqrt{P^2 + Q^2} = 3 \indice{V}{eff}\indice{I}{eff}$.
+
+\paragraph{Pertes par effet Joule}
+On ne considère que la partie résistive $r$ du récepteur. 
+\begin{itemize}
+\item Perte dans une phase du récepteur : $P = r\indice{I}{eff}^2$.
+\item Perte dans le récepteur : $P = 3 r\indice{I}{eff}^2$.
+\end{itemize}
 
 \section{Quelques calculs}
 
