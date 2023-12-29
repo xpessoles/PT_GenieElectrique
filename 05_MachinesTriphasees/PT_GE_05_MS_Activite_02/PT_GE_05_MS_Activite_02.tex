@@ -14,37 +14,90 @@ Machines Synchrones -- Alternateur
 \marginnote{Ressources de Philippe Dubois.}
 
 
-Un alternateur triphasé dont les enroulements de stator sont couplés en étoile, fournit en charge nominale, un courant $I = \SI{200}{A}$ sous une tension simple $V = \SI{2,88}{KV}$ lorsque la charge est inductive et de facteur de puissance est égal à 0,87. 
-La résistance d’un enroulement statorique vaut $R = \SI{0,20}{\Omega}$. 
-La vitesse de rotation de la roue polaire est $ns = \SI{750}{tr.min^{-1}}$.
-Les tensions produites ont pour fréquence $f = \SI{50}{Hz}$. 
-L’ensemble des pertes constantes et par effet Joule dans le rotor atteint \SI{55}{kW}. 
-Un essai à vide, à la fréquence de rotation nominale, a donné les résultats suivants pour lesquels $I_e$ est l’intensité du courant d’excitation et $E_0$ la valeur efficace de la tension entre une phase et le neutre.
+La plaque signalétique d´un alternateur triphasé donne : 
+\begin{itemize}
+\item $S =\SI{2}{MVA}$; 
+\item $\SI{2885}{V}/\SI{5000}{V}$;
+\item $\SI{50}{Hz}$ ;
+\item $\SI{1500}{tr/min}$.
+\end{itemize}
+
+Les enroulements sont couplés en étoile, on mesure la résistance entre deux phases $\indice{R}{mes}=\SI{0,40}{\Omega}$.
+On note $L$ l'impédance d'un enroulement d'une phase.
+La résistance du rotor $\indice{R}{e}=\SI{10}{\Omega}$.
+L’ensemble des pertes fer et mécaniques valent $\SI{65}{kW}$.
 
 
-\begin{center}
-\begin{tabular}{*{12}{c}}
-\hline
-$I_e$ (\si{A}) 	& 0	&10	& 20	& 30	& 40	& 50	& 60	& 70	& 80	& 90	& 100	\\
-\hline
-$E_0$ (\si{V})	& 0	& 606	& 1212	& 1819	& 2425	& 3002	& 3435	& 3782	& 4041	& 4215	& 4330	\\
-\hline
-\end{tabular}
-\end{center}
-
-Un essai en court-circuit a donné, pour un courant d´excitation d’intensité $I_e=\SI{40}{A}$, un courant dans les enroulements du stator $\indice{I}{cc}=\SI{2,5}{kA}$.
-
-\question{Quel est le nombre de paires de pôles du rotor ?}
-
-\question{Calculer la réactance synchrone $X_s$ de l’alternateur lorsqu’il n’est pas saturé.}
-
-On supposera $X_s$ constante pour la suite.
-
-\question{En déduire la f.e.m. synchrone $E$ au point de fonctionnement nominal et en déduire le courant d’excitation.}
-
-\question{Calculer la puissance nominale fournie par l’alternateur et le rendement au point de fonctionnement nominal.}
+Un essai << à vide >> donne une caractéristique d´équation $E = 100I_e$ ou $E$ est la valeur efficace de la fem induite dans un enroulement et $I_e$ est l’intensité du courant d’excitation : $0 < I_e < \SI{50}{A}$.
 
 
+En charge cet alternateur alimente une installation triphasée équilibrée, inductive, de facteur puissance 0,80, sous une tension efficace nominale $U_n = \SI{5000}{V}$ entre phases. 
+L’intensité efficace du courant en ligne est alors $I_n = \SI{200}{A}$ et le courant d´excitation $I_e = \SI{32}{A}$.
+
+\question{Déterminer le nombre de pôles de la machine.}
+\ifprof
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{cor_01}
+\end{marginfigure}
+
+\begin{corrige}
+À \si{50}{Hz} et 1 paire de pôles, on tourne à  \si{50}{tr/s} soient \si{3000}{tr/min}.  Pour aller à \si{1500}{tr/min} il faut donc 2 paires de pôles. 
+
+On a aussi $N_s = \dfrac{60f}{p}$ $\Rightarrow p =\dfrac{60\times 50}{1500} = 2$.
+\end{corrige}
+\else
+\fi
+
+\question{Rappeler dans quelles conditions est réalisé l'essai << à vide >>.} 
+\ifprof
+\begin{corrige}
+Source ? Moteur entrainé par un MCC à la vitesse de synchronisme ? On mesure une tension simple sur le stator ? et le courant dans le rotor ?
+\end{corrige}
+\else
+\fi
+
+\question{Déterminer la résistance $r$ d'un enroulement statorique.}
+\ifprof
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{cor_02}
+\end{marginfigure}
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{cor_03}
+\end{marginfigure}
+
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\question{Donner le schéma équivalent d’un enroulement 
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+Traiter les questions suivantes pour un fonctionnement << en charge >>.
+
+\question{Tracer le diagramme de Fresnel.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+\question{En faisant l'hypothèse que $r<< L \omega_s$, déterminer la valeur de $L$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\question{Calculer la puissance utile, les différentes pertes, la puissance absorbée totale, le rendement et le moment du couple nécessaire pour entrainer la machine synchrone.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \ifprof
 \else
