@@ -377,7 +377,7 @@ D'après la loi des n\oe{}uds, $i_1 + i_2 + i_3 = i_N$. S'agissant des mêmes im
 %\marginnote{{Rappel : $3\indice{V}{eff} = \sqrt{3}\indice{U}{eff}$.}}
 \begin{tabular}{lll}
 \hline
-& Puissance active & Puissance réactive \\ 
+& \textbf{Puissance active} & \textbf{Puissance réactive} \\ 
 1 phase du récepteur & 
 $P_1 = \indice{V}{eff}\indice{I}{eff} \cos \varphi$ &
 $Q_1 = \indice{V}{eff}\indice{I}{eff} \sin \varphi$ \\
@@ -390,11 +390,50 @@ $Q = 3Q_1 = 3 \indice{V}{eff}\indice{I}{eff} \sin \varphi$ \\
 La puissance apparente est donc donnée par $S = \sqrt{P^2 + Q^2} = 3 \indice{V}{eff}\indice{I}{eff}$.
 
 \paragraph{Pertes par effet Joule}
-On ne considère que la partie résistive $r$ du récepteur. 
+On ne considère que la partie résistive $r$ du récepteur. La résistance entre phase vaiut $R = 2r$
 \begin{itemize}
 \item Perte dans une phase du récepteur : $P = r\indice{I}{eff}^2$.
 \item Perte dans le récepteur : $P = 3 r\indice{I}{eff}^2$.
 \end{itemize}
+
+
+
+\subsubsection{Couplage en triangle}
+
+
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{fig_13a}
+\includegraphics[width=\linewidth]{fig_13b}
+\caption{Couplage en triangle \label{fig:ge:cours:13}}
+\end{marginfigure}
+
+On a  $i_1 + i_2 + i_3 = 0$ et $j_{12}+j_{23}+j_{31}=0$.
+
+On montre que $J = \dfrac{I}{\sqrt{3}}$ et $U = V\sqrt{3}$.
+%\marginnote{{Rappel : $3\indice{V}{eff} = \sqrt{3}\indice{U}{eff}$.}}
+\begin{tabular}{lll}
+\hline
+& \textbf{Puissance active} & \textbf{Puissance réactive} \\ 
+1 phase du récepteur & 
+$P_1 = \indice{U}{eff}\indice{J}{eff} \cos \varphi$ &
+$Q_1 = \indice{U}{eff}\indice{J}{eff} \sin \varphi$ \\
+Récepteur complet & 
+$P = 3P_1 =  3\indice{U}{eff}\indice{J}{eff} \cos \varphi$ &
+$Q = 3Q_1 = 3 \indice{U}{eff}\indice{J}{eff} \sin \varphi$ \\
+\hline
+\end{tabular}
+
+La puissance apparente est donc donnée par $S = \sqrt{P^2 + Q^2} = 3 \indice{U}{eff}\indice{J}{eff}$.
+
+\paragraph{Pertes par effet Joule}
+On ne considère que la partie résistive $r$ du récepteur. La résistance entre phase vaut $R = \dfrac{2}{3}r$ 
+\begin{itemize}
+\item Perte dans une phase du récepteur : $P = r\indice{J}{eff}^2$.
+\item Perte dans le récepteur : $P = 3 r\indice{J}{eff}^2$.
+\end{itemize}
+
+
 
 \section{Quelques calculs}
 
