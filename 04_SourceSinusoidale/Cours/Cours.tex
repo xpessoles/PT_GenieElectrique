@@ -202,7 +202,7 @@ $P= -\dfrac{CE\omega^2}{T}\underbrace{\int\limits_{0}^{T} \cos\left(\omega t + \
 
 
 
-\subsection{Puissance apparente complexe\sidenote{$\underline{i}^*(t)$ est le nombre complexe conjugué de $\underline{i}(t)$.}}
+\subsection{Puissance apparente complexe}\sidenote{$\underline{i}^*(t)$ est le nombre complexe conjugué de $\underline{i}(t)$.}
 
 \marginnote{La puissance active va permettre de chauffer, déplacer une charge, produire un mouvment \textit{etc.}}
 
@@ -352,6 +352,9 @@ En traçant les tensions simples dans le plan complexe, on peut en déduire diff
 Par exemple, l'amplitude de la tension $U_{12}=|\underline{u_{12}}(t)|$ est égale à $2V_1\cos 30$ 
 $ = {V}_{1}\sqrt{3}$ 
 
+\begin{resultat}[Relation Tension simple -- Tension composée]
+$U_{12} = {V}_{1}\sqrt{3}$
+\end{resultat}
 
 
 \subsection{Couplages}
@@ -365,6 +368,8 @@ On note $j$ les courants traversant les dipoles.
 
 \subsubsection{Couplage en étoile}
 
+D'après la loi des n\oe{}uds, $i_1 + i_2 + i_3 = i_N$. S'agissant des mêmes impédances, on a $i_N=0$. Pour un système équilibré, le fil de neutre peut donc être enlevé sur le schéma.
+
 
 \begin{marginfigure}
 \centering
@@ -372,7 +377,6 @@ On note $j$ les courants traversant les dipoles.
 \caption{Couplage en étoile \label{fig:ge:cours:12}}
 \end{marginfigure}
 
-D'après la loi des n\oe{}uds, $i_1 + i_2 + i_3 = i_N$. S'agissant des mêmes impédances, on a $i_N=0$. Pour un système équilibré, le fil de neutre peut donc être enlevé sur le schéma.
 
 %\marginnote{{Rappel : $3\indice{V}{eff} = \sqrt{3}\indice{U}{eff}$.}}
 \begin{tabular}{lll}
@@ -389,6 +393,13 @@ $Q = 3Q_1 = 3 \indice{V}{eff}\indice{I}{eff} \sin \varphi$ \\
 
 La puissance apparente est donc donnée par $S = \sqrt{P^2 + Q^2} = 3 \indice{V}{eff}\indice{I}{eff}$.
 
+\paragraph{Démonstration}
+On a $\underline{I_1} = \indice{I}{eff} \sqrt{2} e^{j\left(\omega t\right)} $ et 
+$\underline{V_1} = \indice{V}{eff} \sqrt{2}e^{j\left(\omega t + \varphi\right)}$. La puissance apparente dans un enroulement est donc   
+$\underline{S} = \dfrac{1}{2} \indice{V}{eff} \sqrt{2}e^{j\left(\omega t + \varphi\right)}
+\indice{I}{eff} \sqrt{2} e^{-j\left(\omega t\right)}$
+$= \indice{I}{eff}\indice{V}{eff} e^{j \varphi}$
+ et $P_a =\indice{I}{eff}\indice{V}{eff} \cos\varphi$. 
 \paragraph{Pertes par effet Joule}
 On ne considère que la partie résistive $r$ du récepteur. La résistance entre phase vaiut $R = 2r$
 \begin{itemize}
