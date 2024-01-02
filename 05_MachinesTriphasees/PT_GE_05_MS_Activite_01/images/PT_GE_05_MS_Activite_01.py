@@ -4,7 +4,7 @@ phi = m.acos(0.87)
 
 V = 2880
 R = 0.2
-Icc = 2500
+Icc = 200
 Lom = 0.95
 
 E = R*R *Icc*Icc+ V*V + Icc*Icc*Lom*Lom
