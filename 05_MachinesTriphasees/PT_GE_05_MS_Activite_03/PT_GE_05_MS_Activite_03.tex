@@ -19,7 +19,7 @@ La plaque signalétique d’une machine synchrone triphasée porte les indicatio
 La machine est couplée en étoile.
 Un essai à vide, en alternateur, à vitesse de synchronisme a montré que sa caractéristique $E=f(I_e)$   est une droite passant par l’origine et par le point $E = 200 V$ pour $I_e = \SI{20}{A}$.
 
-Un essai en cour-tcircuit à la vitesse de synchronisme montre que la caractéristique $\indice{I}{cc}=f(I_e)$ est aussi une droite passant par l’origine et par le point $\indice{I}{cc} = \SI{205}{A}$ pour $I_e = \SI{30}{A}$.
+Un essai en court-circuit à la vitesse de synchronisme montre que la caractéristique $\indice{I}{cc}=f(I_e)$ est aussi une droite passant par l’origine et par le point $\indice{I}{cc} = \SI{205}{A}$ pour $I_e = \SI{30}{A}$.
 La résistance des enroulements statoriques est supposée négligeable. 
 
 \subsection*{Etude en fonctionnement alternateur}
@@ -37,10 +37,28 @@ On a $N_s = \dfrac{60f}{p}$ $\Rightarrow p = \dfrac{60f}{N_s}$ $=\dfrac{60\times
 
 \question{Déterminer la réactance synchrone ($L \omega$) d’un enroulement statorique de cette machine.\sidenote{On pourra utiliser l'essai en court-circuit.}
  %La machine fonctionne en alternateur.
-}
+ }
 \ifprof
 \begin{corrige}
+On utilise le modèle suivant. 
 
+\begin{center}
+\includegraphics[width=\linewidth]{cor_01}
+\end{center}
+
+Pour le modèle en court-circuit, on a $\underline{I}=\indice{I}{cc}\sqrt{2}e^{j\left(\omega t\right)}$.
+
+On a $E = 10 I_e $; donc pour \SI{30}{A}, $E_0=\SI{300}{V}$. En conséquences, $\underline{E}=E_0\sqrt{2}e^{j\left(\omega t + \varphi\right)}$.
+
+$\underline{U_X}=\indice{I}{cc}jL\omega\sqrt{2}e^{j\left(\omega t\right)}$.
+
+
+D'après la loi des mailles, $\underline{E} = \underline{U_X}$; donc 
+$E_0\sqrt{2}e^{j\left(\omega t + \varphi\right)} = \indice{I}{cc}jL\omega\sqrt{2}e^{j\left(\omega t\right)}$ et $\varphi = \dfrac{\pi}{2}$.
+
+Au final, $ L\omega =\dfrac{E_0}{\indice{I}{cc}} $.
+
+\textit{AN :} $ L\omega =\dfrac{300}{205} = \SI{1,46}{\Omega}$.
 
 \end{corrige}
 \else
@@ -48,6 +66,14 @@ On a $N_s = \dfrac{60f}{p}$ $\Rightarrow p = \dfrac{60f}{N_s}$ $=\dfrac{60\times
 
 \question{Déterminer $I_e$ pour que la machine fournisse son intensité nominale, sous sa tension nominale, à une charge de facteur de puissance 0,93.}
 \ifprof
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{cor_02}
+\end{marginfigure}
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{cor_03}
+\end{marginfigure}
+
 \begin{corrige}
 
 
